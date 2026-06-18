@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="custom_generated_terrain">
+    
+    <include><uri>model://sun</uri></include>
+    
+    <model name="procedural_hills">
+      <static>true</static>
+      <link name="terrain_link">
+        
+        <collision name="collision">
+          <geometry>
+            <heightmap>
+              <uri>file:///home/bhavana/autonomous_exploration_project/procedural_hills.png</uri>
+              <size>50 50 4</size>
+              <pos>0 0 -1.5</pos>
+            </heightmap>
+          </geometry>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <heightmap>
+              <texture>
+                <diffuse>file://media/materials/textures/dirt_diffusespecular.png</diffuse>
+                <normal>file://media/materials/textures/flat_normal.png</normal>
+                <size>5</size>
+              </texture>
+              <uri>file:///home/bhavana/autonomous_exploration_project/procedural_hills.png</uri>
+              <size>50 50 4</size>
+              <pos>0 0 -1.5</pos>
+            </heightmap>
+          </geometry>
+        </visual>
+        
+      </link>
+    </model>
+  </world>
+</sdf>
