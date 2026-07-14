@@ -23,18 +23,17 @@ chmod +x setup_workspace.sh
 ./setup_workspace.sh
 ```
 
+
 ## Team Contributions
 
-This Master's project was developed collaboratively by a team of four, with each member leading distinct architectural and engineering domains within the ROS 2 ecosystem:
+* **Bhavana Kakarla – Systems Integration, Environments & Project Coordination** 
+  Managed the overall system architecture, GitHub repository, and version control standards. I developed the automated bash scripts (e.g., `run_2d_exploration.sh`) to streamline the launch process and engineered the custom Python scripts for procedural 3D terrain generation. On the management side, I coordinated our development milestones and ensured all code integrations remained stable across the team's different hardware setups.
 
-* **[Your Name] – Systems Architecture & Environment Engineering** 
-  Led the overarching systems integration and GitHub repository management. Developed the automated bash launch architectures (`run_2d_exploration.sh`, `setup_workspace.sh`) to handle asynchronous node lifecycles and TF tree initialization. Also engineered the custom Python procedural terrain generation (`generate_terrain.py`) and `.world` files for unstructured environment testing.
+* **Rudraksh Jayeshkumar Makwana – Navigation, Path Planning & Visual Media** 
+  Focused on implementing and tuning the Nav2 stack, calibrating global and local costmap parameters to ensure safe obstacle avoidance. Beyond the navigation code, they led the creation of visual assets for the project. This included recording and editing the simulation demonstrations, as well as designing the system architecture diagrams used to explain our navigation stack.
 
-* **[Teammate 2 Name] – Navigation & Path Planning (Nav2)** 
-  Spearheaded the configuration of the ROS 2 Navigation Stack. Tuned the global and local costmap parameters, including the inflation layers and robot footprint radii, to ensure safe obstacle avoidance. Managed the integration of the A*/Dijkstra global planners to allow the robot to efficiently backtrack through known space to reach new frontiers.
+* **Srikar Maddala – SLAM, Spatial Perception & Data Analysis** 
+  Took ownership of the mapping pipeline using `slam_toolbox`, integrating the 2D LiDAR sensor data and optimizing the occupancy grid to prevent map drift. Additionally, they managed the experimental data analysis. They extracted metrics from our simulation runs (such as mapping completion time and CPU/memory usage) and structured this data into clear, comparative charts for our final presentation.
 
-* **[Teammate 3 Name] – SLAM & Spatial Perception** 
-  Managed the mapping pipeline using `slam_toolbox`. Tuned the Bayesian probability logic (log-odds updating) and occupancy grid resolution to ensure real-time map generation without CPU bottlenecking. Handled the 2D LiDAR (`LDS-01`) sensor pipeline and ensured accurate Odometry and Pose Graph optimization to prevent map drift.
-
-* **[Teammate 4 Name] – Autonomous Exploration & Evaluation** 
-  Led the implementation of the `explore_lite` frontier-based exploration algorithm. Calibrated the mathematical boundary detection between known and unknown spaces to prevent the algorithm from stalling or infinitely looping. Directed the experimental evaluation, managed the termination conditions (frontier blacklisting), and synthesized the simulation data for the final academic presentation.
+* **Srinivas Polanki – Exploration Logic, Evaluation & Technical Documentation** 
+  Led the integration of the `explore_lite` algorithm, configuring the boundary detection thresholds and mathematical stopping conditions for the autonomous exploration. They also led the project's technical documentation, organizing the defense presentation slide deck, structuring the repository's README, and ensuring our presentation materials accurately reflected the underlying robotics concepts.
