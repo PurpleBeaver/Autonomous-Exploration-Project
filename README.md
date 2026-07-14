@@ -22,6 +22,3 @@ Ensure ROS 2 Humble is installed on your system. Then, clone this repository and
 chmod +x setup_workspace.sh
 ./setup_workspace.sh
 
-
-* **[Teammate 4 Name] – Autonomous Exploration & Evaluation** 
-  Led the implementation of the `explore_lite` frontier-based exploration algorithm. Calibrated the mathematical boundary detection between known and unknown spaces to prevent the algorithm from stalling or infinitely looping. Directed the experimental evaluation, managed the termination conditions (frontier blacklisting), and synthesized the simulation data for the final academic presentation.
